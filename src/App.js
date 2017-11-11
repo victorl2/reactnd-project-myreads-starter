@@ -4,6 +4,7 @@ import Bookshelf from './Bookshelf';
 import * as BooksAPI from './BooksAPI';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import {DebounceInput} from 'react-debounce-input';
 import If from './If';
 
 
@@ -106,18 +107,21 @@ class BooksApp extends React.Component {
               <div className="input-group">
 
                 <Route path="/" render={({history}) => (
-                  <input type="text"
+                  <DebounceInput
                     className="form-control border-right-0"
                     placeholder="Search by title or author"
                     onSubmit={(evt) => {
                       evt.preventDefault();
-                      return false;
+                        return false;
                     }}
-                    onChange={(evt) => {
-                      history.push('/search');
-                      this.searchForBooks(evt,history);
+                    debounceTimeout={120}
+                    onChange={evt => {
+                      this.setState(function(){
+                        history.push('/search');
+                        this.searchForBooks(evt,history);
+                        return {query: evt.target.value};
+                      })
                     }}
-                    value={this.state.query}
                   />
                 )}
                 />
