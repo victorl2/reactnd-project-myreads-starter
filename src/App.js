@@ -79,11 +79,6 @@ class BooksApp extends React.Component {
 
   }
 
-  submit = function(evt){
-    evt.preventDefault();
-    alert('it works!');
-  }
-
   componentDidMount = () => {
     this.getBooks();
   }
