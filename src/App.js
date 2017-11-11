@@ -90,7 +90,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <nav className="navbar navbar-expand navbar-light bg-light">
-          <Link to="/" className="navbar-brand">MyReads</Link>
+          <a href="#" className="navbar-brand">MyReads</a>
 
           <div className="navbar-collapse collapse justify-content-stretch" id="navbar5">
             <ul className="navbar-nav">
