@@ -9,7 +9,7 @@ MyReads, um webapp gerenciador de livros feito com React.
 <ul> 
   <li>Clone o projeto em um diretório de sua preferência</li>
   <li>Vá até o diretório do projeto</li>
-  <li>Instale todas as dependencias do projeto com <b>npm install</b></li>
+  <li>Instale todas as dependencias do projeto com <b>npm install</b></li>
   <li>Execute o projeto com o comando <b>npm start</b></li>
 </ul>
 
