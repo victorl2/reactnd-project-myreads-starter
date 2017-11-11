@@ -30,6 +30,7 @@ class BooksApp extends React.Component {
     this.setState((prev) => {
       if(prev.query.length > 0 && query.length === 0)
         history.push('/');
+        this.getBooks();
       return {query};
     })
 
@@ -69,7 +70,7 @@ class BooksApp extends React.Component {
   }
 
   /*Update the content of the bookshelf
-  after a books moving betwen bookshelfs */
+  after a book moving betwen bookshelfs */
   refreshBookshelfs = (id,newShelf) => {
     this.setState(function(){
       for(let book of this.state.books){
@@ -84,11 +85,12 @@ class BooksApp extends React.Component {
   }
 
   render() {
+    console.log("RENDER");
     const books = this.state.books;
     return (
       <div className="app">
         <nav className="navbar navbar-expand navbar-light bg-light">
-          <a href="/" className="navbar-brand">MyReads</a>
+          <Link to="/" className="navbar-brand">MyReads</Link>
 
           <div className="navbar-collapse collapse justify-content-stretch" id="navbar5">
             <ul className="navbar-nav">
