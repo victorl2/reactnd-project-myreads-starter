@@ -8,11 +8,14 @@ import If from './If';
 
 
 class BooksApp extends React.Component {
-  state = {
-    query: '',
-    showSearchPage: false,
-    books: [],
-    queryBooks: []
+  constructor(props){
+    super(props);
+    this.state = {
+      query: '',
+      showSearchPage: false,
+      books: [],
+      queryBooks: []
+    }
   }
 
   /*get all the books currently in
@@ -85,7 +88,6 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    console.log("RENDER");
     const books = this.state.books;
     return (
       <div className="app">
