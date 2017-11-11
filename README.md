@@ -2,6 +2,9 @@
 
 MyReads, um webapp gerenciador de livros feito com React.
 
+<h1>Conteúdo do projeto</h1>
+<p>Este projeto contem uma aplicação React, além de algumas dependências necessárias sua execução. Você deve ter o <a href="https://nodejs.org/en/">NodeJS</a> instalado para conseguir executar o projeto localmente.
+</p>
 <h1>Instalando o projeto</h1>
 <ul> 
   <li>Clone o projeto em um diretório de sua preferência</li>
