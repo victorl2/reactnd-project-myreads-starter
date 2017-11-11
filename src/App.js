@@ -119,7 +119,6 @@ class BooksApp extends React.Component {
                       this.setState(function(){
                         history.push('/search');
                         this.searchForBooks(evt,history);
-                        return {query: evt.target.value};
                       })
                     }}
                   />
