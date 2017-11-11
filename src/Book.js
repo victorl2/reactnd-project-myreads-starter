@@ -1,6 +1,6 @@
 import React from 'react';
 import * as BooksAPI from './BooksAPI';
-
+import PropTypes from "prop-types";
 
 function Book(props){
   const moveBook = (props,event) => {
@@ -34,5 +34,13 @@ function Book(props){
     );
 }
 
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  authors: PropTypes.array.isRequired,
+  shelf: PropTypes.string.isRequired,
+  moveBookshelf: PropTypes.func.isRequired
+}
 
 export default Book;
