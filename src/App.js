@@ -13,7 +13,6 @@ class BooksApp extends React.Component {
     super(props);
     this.state = {
       query: '',
-      showSearchPage: false,
       books: [],
       queryBooks: []
     }
@@ -146,9 +145,16 @@ class BooksApp extends React.Component {
             }
             secondary={
               <div className="alert alert-warning" role="alert">
-                {this.state.query !== ''?
-                `No results for the query ${this.state.query}`:
-                'No results'}
+                <If test={this.state.query !== ''}
+                  main={
+                    <div>
+                      No result for the query <b>{this.state.query}</b>
+                    </div>
+                  }
+                  secondary={
+                    <div>No results found</div>
+                  }
+                />
               </div>
             }
           />
