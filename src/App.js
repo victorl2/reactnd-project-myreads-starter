@@ -92,7 +92,11 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <nav className="navbar navbar-expand navbar-light bg-light">
-          <a href="#" className="navbar-brand">MyReads</a>
+          <Link to="/"
+            onClick={this.getBooks}
+          className="navbar-brand">
+            MyReads
+          </Link>
 
           <div className="navbar-collapse collapse justify-content-stretch" id="navbar5">
             <ul className="navbar-nav">
